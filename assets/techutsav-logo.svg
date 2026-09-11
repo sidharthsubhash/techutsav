@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" fill="none">
+  <!-- Glowing ribbon swirl above TECH UTSAV -->
+  <path d="M 82 22 C 88 10, 108 8, 115 18 C 122 28, 138 28, 144 18 C 150 8, 132 4, 120 12" 
+        stroke="url(#utsavGrad)" stroke-width="4.5" stroke-linecap="round" fill="none" filter="url(#glowNeon)" />
+
+  <!-- TECH text -->
+  <text x="5" y="44" font-family="'Outfit', 'Inter', sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="2">TECH</text>
+  
+  <!-- UTSAV text -->
+  <text x="100" y="44" font-family="'Outfit', 'Inter', sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="3.5">UTSAV</text>
+
+  <!-- Tagline: IDEAS | INNOVATE | BUILD -->
+  <text x="7" y="66" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#a0aec0" letter-spacing="4">
+    IDEAS  <tspan fill="#8b5cf6">|</tspan>  INNOVATE  <tspan fill="#8b5cf6">|</tspan>  BUILD
+  </text>
+
+  <defs>
+    <linearGradient id="utsavGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="80%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+    <filter id="glowNeon" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

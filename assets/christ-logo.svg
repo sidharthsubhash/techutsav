@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" fill="none">
+  <!-- CHRIST Crest Gold Emblem -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Rings -->
+    <circle cx="60" cy="60" r="56" stroke="#c89d53" stroke-width="2.5" fill="none"/>
+    <circle cx="60" cy="60" r="50" stroke="#c89d53" stroke-width="1.2" fill="none"/>
+    
+    <!-- Text along arc or circular text -->
+    <path id="leftArc" d="M 24 60 A 42 42 0 0 1 60 18" fill="none"/>
+    <path id="rightArc" d="M 60 18 A 42 42 0 0 1 96 60" fill="none"/>
+    
+    <text font-family="'Cinzel', 'Times New Roman', serif" font-size="7.5" font-weight="600" fill="#c89d53" letter-spacing="2.5">
+      <textPath href="#leftArc" startOffset="50%" text-anchor="middle">EXCELLENCE</textPath>
+    </text>
+    <text font-family="'Cinzel', 'Times New Roman', serif" font-size="7.5" font-weight="600" fill="#c89d53" letter-spacing="2.5">
+      <textPath href="#rightArc" startOffset="50%" text-anchor="middle">SERVICE</textPath>
+    </text>
+    
+    <text x="60" y="104" font-family="'Cinzel', 'Times New Roman', serif" font-size="9" font-weight="bold" fill="#c89d53" text-anchor="middle" letter-spacing="2">CHRIST</text>
+    
+    <!-- Sunburst Rays -->
+    <g stroke="#c89d53" stroke-width="0.8" opacity="0.6">
+      <line x1="60" y1="60" x2="60" y2="28" />
+      <line x1="60" y1="60" x2="60" y2="92" />
+      <line x1="60" y1="60" x2="28" y2="60" />
+      <line x1="60" y1="60" x2="92" y2="60" />
+      <line x1="60" y1="60" x2="38" y2="38" />
+      <line x1="60" y1="60" x2="82" y2="82" />
+      <line x1="60" y1="60" x2="82" y2="38" />
+      <line x1="60" y1="60" x2="38" y2="82" />
+      <line x1="60" y1="60" x2="48" y2="30" />
+      <line x1="60" y1="60" x2="72" y2="90" />
+      <line x1="60" y1="60" x2="72" y2="30" />
+      <line x1="60" y1="60" x2="48" y2="90" />
+      <line x1="60" y1="60" x2="30" y2="48" />
+      <line x1="60" y1="60" x2="90" y2="72" />
+      <line x1="60" y1="60" x2="30" y2="72" />
+      <line x1="60" y1="60" x2="90" y2="48" />
+    </g>
+
+    <!-- 5-Point Star -->
+    <polygon points="60,18 69,45 98,45 74,62 83,90 60,73 37,90 46,62 22,45 51,45" fill="none" stroke="#c89d53" stroke-width="1.8" stroke-linejoin="round"/>
+
+    <!-- Candle & Flame -->
+    <path d="M 59 44 Q 60 40 60 38 Q 60 40 61 44 Z" fill="#e8b960" stroke="#c89d53" stroke-width="0.5"/>
+    <rect x="58.5" y="46" width="3" height="24" rx="1.5" fill="#f8eed8" stroke="#c89d53" stroke-width="0.8"/>
+    <!-- Book at bottom of candle -->
+    <path d="M 52 74 C 56 71, 59 72, 60 74 C 61 72, 64 71, 68 74 L 68 83 C 64 80, 61 81, 60 83 C 59 81, 56 80, 52 83 Z" fill="#ffffff" stroke="#c89d53" stroke-width="1"/>
+    <line x1="60" y1="74" x2="60" y2="83" stroke="#c89d53" stroke-width="1"/>
+  </g>
+
+  <!-- CHRIST Typography -->
+  <g transform="translate(150, 20)">
+    <!-- Main Title "CHRIST" -->
+    <text x="0" y="44" font-family="'Cinzel', 'Times New Roman', 'Playfair Display', Georgia, serif" font-size="46" font-weight="900" fill="#ffffff" letter-spacing="3" text-shadow="0 0 20px rgba(255,255,255,0.2)">CHRIST</text>
+    
+    <!-- Divider Line -->
+    <line x1="0" y1="56" x2="310" y2="56" stroke="#c89d53" stroke-width="2.2" stroke-linecap="round"/>
+    
+    <!-- (DEEMED TO BE UNIVERSITY) -->
+    <text x="0" y="74" font-family="'Cinzel', 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#c89d53" letter-spacing="2">(DEEMED TO BE UNIVERSITY)</text>
+    
+    <!-- BANGALORE | DELHI NCR | PUNE -->
+    <text x="0" y="93" font-family="'Cinzel', 'Times New Roman', serif" font-size="12" font-weight="600" fill="#8ca8d8" letter-spacing="2.5">BANGALORE  |  DELHI NCR  |  PUNE</text>
+  </g>
+</svg>
