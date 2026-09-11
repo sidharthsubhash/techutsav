@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Utsav 2026 | Choose Your Challenge | Christ University & ASCII</title>
+  <meta name="description" content="Tech Utsav 2026 Hackathon Problem Statements portal for 2nd Year and 3rd Year students by Department of Computer Science and Engineering, CHRIST (Deemed to be University) & ASCII.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Ambient Cyber Background Effects -->
+  <div class="cyber-bg-glow">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+  </div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      
+      <!-- Left: ASCII Club Logo -->
+      <div class="nav-brand-group">
+        <a href="#home" class="brand-ascii" title="ASCII Student Association">
+          <img src="assets/ascii-logo.png" alt="ASCII Student Association" class="ascii-logo-img">
+        </a>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#problem-statements-section" class="nav-link active">Problem Statements</a></li>
+          <li><a href="#about" class="nav-link" onclick="openAboutModal(event)">About</a></li>
+          <li><a href="#timeline" class="nav-link" onclick="openTimelineModal(event)">Timeline</a></li>
+          <li><a href="#contact" class="nav-link" onclick="openContactModal(event)">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Date Pill & Christ University Logo -->
+      <div class="nav-actions">
+        <!-- Date Pill -->
+        <div class="date-pill">
+          <i data-lucide="calendar"></i>
+          <span>Sept 15 - 16, 2026</span>
+        </div>
+
+        <!-- Christ University Official Crest Logo -->
+        <div class="brand-christ" title="CHRIST (Deemed to be University)">
+          <img src="assets/christ-logo.png" alt="CHRIST (Deemed to be University)" class="christ-logo-img">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hackathon-badge-wrapper">
+            <span class="hackathon-badge">H A C K A T H O N</span>
+            <div class="hackathon-line"></div>
+          </div>
+
+          <h1 class="hero-title">
+            Choose Your
+            <span>Challenge</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Explore the problem statements, pick one and start building something impactful.
+          </p>
+
+          <!-- 2nd Year / 3rd Year Segmented Switcher -->
+          <div class="year-switcher-container">
+            <div class="year-switcher" id="year-switcher">
+              <div class="year-pill-bg" id="year-tab-indicator"></div>
+              <button class="year-tab-btn active" id="tab-2nd" type="button">2ND YEAR</button>
+              <button class="year-tab-btn" id="tab-3rd" type="button">3RD YEAR</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual (3D Isometric Laptop + Doodle Annotations) -->
+        <div class="hero-visual">
+          <div class="laptop-showcase">
+            
+            <!-- Doodle: "GOOD IDEAS START HERE" -->
+            <div class="doodle-item doodle-good-ideas">
+              <span class="doodle-text">GOOD<br>IDEAS<br>START<br>HERE.</span>
+              <svg class="doodle-arrow-1" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 5 15 Q 30 5, 45 28" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M 38 30 L 48 30 L 48 18" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+
+            <!-- Sticker: "BUILD WHAT MATTERS" with Smiley -->
+            <div class="doodle-item sticker-build-matters">
+              <div class="sticker-smiley">☺</div>
+              <div class="sticker-label">BUILD<br>WHAT<br>MATTERS</div>
+            </div>
+
+            <!-- Doodle: "IDEAS INTO IMPACT" -->
+            <div class="doodle-item doodle-ideas-impact">
+              <svg class="doodle-arrow-2" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 32 Q 35 25, 45 8" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M 38 6 L 48 6 L 48 18" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              <span class="doodle-text" style="font-size: 1.3rem; text-align: right;">IDEAS<br>INTO<br>IMPACT</span>
+            </div>
+
+            <!-- Hacker Vertical Tagline -->
+            <div class="doodle-item hacker-keywords">
+              <span>CODE</span>
+              <span>CREATE</span>
+              <span>COLLABORATE</span>
+              <span>LEARN</span>
+              <span>GROW</span>
+            </div>
+
+            <!-- 3D Laptop Composite -->
+            <div class="laptop-isometric">
+              <!-- Screen Display -->
+              <div class="laptop-screen-frame">
+                <div class="laptop-screen-glass">
+                  <div class="screen-top-bar">
+                    <div class="window-dots">
+                      <div class="window-dot red"></div>
+                      <div class="window-dot yellow"></div>
+                      <div class="window-dot green"></div>
+                    </div>
+                    <span class="screen-hackathon-title">TECH_UTSAV://2026</span>
+                  </div>
+
+                  <div class="screen-code-content">
+                    <p><span class="kw">async function</span> <span class="fn">solveChallenge</span>() {</p>
+                    <p style="padding-left: 12px;"><span class="kw">const</span> team = <span class="str">"Innovators"</span>;</p>
+                    <p style="padding-left: 12px;"><span class="kw">await</span> buildAwesomePrototype();</p>
+                    <p style="padding-left: 12px;"><span class="kw">return</span> <span class="str">"Success 🚀"</span>;</p>
+                    <p>}</p>
+                  </div>
+
+                  <div class="screen-bottom-badge">
+                    <i data-lucide="zap" style="width: 12px; height: 12px; color: #eab308;"></i>
+                    <span>Ready for Deployment</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Base & Keyboard -->
+              <div class="laptop-keyboard-base">
+                <div class="keyboard-grid"></div>
+                <div class="trackpad"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Problem Statements Display Section -->
+    <section class="problem-statements-section" id="problem-statements-section">
+      <div class="container">
+        
+        <!-- Section Header Bar -->
+        <div class="section-header-bar">
+          <div class="section-title-wrap">
+            <h2 class="section-main-heading">
+              <span id="section-title-year" class="year-highlight">2nd Year</span> — Problem Statements
+            </h2>
+          </div>
+          <div class="section-count-badge" id="statements-count-badge">
+            15 PROBLEM STATEMENTS
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-filter-bar">
+          <div class="search-box">
+            <i data-lucide="search"></i>
+            <input type="text" id="search-input" class="search-input" placeholder="Search by number or domain (e.g., 01, AI, IoT)...">
+          </div>
+        </div>
+
+        <!-- 15 Problem Statements Cards Grid -->
+        <div class="problems-grid" id="problems-grid">
+          <!-- Dynamic Problem Cards Injected by JavaScript -->
+        </div>
+
+        <!-- Bottom Action Bar: Pagination + View All -->
+        <div class="bottom-action-bar">
+          <div class="pagination-container" id="pagination-container">
+            <!-- Dynamic Pagination Buttons Injected by JavaScript -->
+          </div>
+
+          <button class="view-all-link" id="view-all-btn" type="button">
+            <span>View All 15 Problem Statements</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Problem Statement Details Modal -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="problem-modal-container" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-code-badge" id="modal-ps-code">PS-2Y-01</span>
+          <h2 class="modal-title" id="modal-ps-title">Problem Statement 1</h2>
+          <span class="modal-domain-tag" id="modal-ps-domain">2nd Year Track • Campus Automation</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-scroll-body" id="modal-ps-body">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="modal-footer">
+        <span class="modal-footer-hint">Select and note this problem statement for your team</span>
+        <div class="modal-actions">
+          <button type="button" class="btn-modal-copy" id="modal-copy-btn" onclick="copyProblemCode()">
+            <i data-lucide="copy"></i>
+            <span>Copy Code</span>
+          </button>
+          <button type="button" class="btn-modal-close-action" onclick="closeModal()">
+            <span>Done</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Informational Modal for About / Timeline / Contact -->
+  <div class="modal-backdrop" id="info-modal-backdrop">
+    <div class="problem-modal-container" style="max-width: 620px;">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-code-badge" id="info-modal-tag">TECH UTSAV 2026</span>
+          <h2 class="modal-title" id="info-modal-title">About Event</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeInfoModal()">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-scroll-body" id="info-modal-body">
+        <!-- Content Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Matching Design -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-content-bar">
+        
+        <!-- Left: Department Branding -->
+        <div class="footer-dept">
+          <div class="footer-cyber-bracket"></div>
+          <p>DEPT. OF<br>COMPUTER SCIENCE<br>AND ENGINEERING</p>
+        </div>
+
+        <!-- Center: Inspiring Quote -->
+        <div class="footer-quote">
+          “ Great solutions start with bold problems. ”
+        </div>
+
+        <!-- Right: Tech Utsav Brand & Accent Line -->
+        <div class="footer-right">
+          <span class="footer-event-name">TECH UTSAV 2026</span>
+          <div class="footer-right-line"></div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+
+  <!-- Modal Helpers for Nav Links -->
+  <script>
+    function openAboutModal(e) {
+      if(e) e.preventDefault();
+      const modal = document.getElementById("info-modal-backdrop");
+      document.getElementById("info-modal-tag").textContent = "EVENT OVERVIEW";
+      document.getElementById("info-modal-title").textContent = "About Tech Utsav 2026";
+      document.getElementById("info-modal-body").innerHTML = `
+        <p><strong>Tech Utsav</strong> is the premier annual hackathon organized by the <strong>Department of Computer Science and Engineering</strong>, in collaboration with the <strong>ASCII Student Association</strong> at <strong>CHRIST (Deemed to be University)</strong>.</p>
+        <div class="modal-section-box">
+          <h4>🎯 Who Can Participate?</h4>
+          <p>Open for both <strong>2nd Year</strong> and <strong>3rd Year</strong> students with tailored tracks of 15 challenging problem statements each.</p>
+        </div>
+        <div class="modal-section-box">
+          <h4>🚀 How to Participate?</h4>
+          <p>Review the problem statements on this portal, discuss with your team, select your preferred challenge, and prepare for kickoff on Sept 15, 2026.</p>
+        </div>
+      `;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+      lucide.createIcons();
+    }
+
+    function openTimelineModal(e) {
+      if(e) e.preventDefault();
+      const modal = document.getElementById("info-modal-backdrop");
+      document.getElementById("info-modal-tag").textContent = "HACKATHON SCHEDULE";
+      document.getElementById("info-modal-title").textContent = "Event Timeline";
+      document.getElementById("info-modal-body").innerHTML = `
+        <div class="modal-section-box">
+          <h4>📅 Day 1: Sept 15, 2026</h4>
+          <ul>
+            <li><strong>09:00 AM:</strong> Inauguration & Problem Statement Briefing</li>
+            <li><strong>10:30 AM:</strong> Hackathon Begins / Hacking Phase 1</li>
+            <li><strong>04:00 PM:</strong> First Mentor Review & Checkpoint</li>
+            <li><strong>09:00 PM:</strong> Mid-way Progress Assessment</li>
+          </ul>
+        </div>
+        <div class="modal-section-box">
+          <h4>📅 Day 2: Sept 16, 2026</h4>
+          <ul>
+            <li><strong>08:00 AM:</strong> Final Sprint & Code Freeze</li>
+            <li><strong>11:00 AM:</strong> Project Submission & Documentation</li>
+            <li><strong>01:30 PM:</strong> Grand Finale & Jury Presentations</li>
+            <li><strong>04:30 PM:</strong> Valedictory Ceremony & Prize Distribution</li>
+          </ul>
+        </div>
+      `;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+      lucide.createIcons();
+    }
+
+    function openContactModal(e) {
+      if(e) e.preventDefault();
+      const modal = document.getElementById("info-modal-backdrop");
+      document.getElementById("info-modal-tag").textContent = "GET IN TOUCH";
+      document.getElementById("info-modal-title").textContent = "Support & Inquiries";
+      document.getElementById("info-modal-body").innerHTML = `
+        <p>Have questions regarding problem statements, team formation, or the submission process?</p>
+        <div class="modal-section-box">
+          <h4>Faculty & Student Coordinators</h4>
+          <p><strong>Department:</strong> Computer Science and Engineering</p>
+          <p><strong>Club:</strong> ASCII Student Association</p>
+          <p><strong>Campus:</strong> CHRIST (Deemed to be University), Bangalore</p>
+        </div>
+      `;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+      lucide.createIcons();
+    }
+
+    function closeInfoModal() {
+      const modal = document.getElementById("info-modal-backdrop");
+      if (modal) modal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+  </script>
+</body>
+</html>
