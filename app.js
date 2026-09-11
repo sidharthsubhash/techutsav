@@ -381,6 +381,29 @@ window.copyProblemCode = function() {
   });
 };
 
+// Toggle Mobile Navigation Drawer
+window.toggleMobileMenu = function() {
+  const drawer = document.getElementById("mobile-nav-drawer");
+  const icon = document.getElementById("hamburger-icon");
+  if (!drawer) return;
+  
+  const isOpen = drawer.classList.toggle("open");
+  if (icon) {
+    icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
+    lucide.createIcons();
+  }
+};
+
+window.closeMobileMenu = function() {
+  const drawer = document.getElementById("mobile-nav-drawer");
+  const icon = document.getElementById("hamburger-icon");
+  if (drawer) drawer.classList.remove("open");
+  if (icon) {
+    icon.setAttribute("data-lucide", "menu");
+    lucide.createIcons();
+  }
+};
+
 // Close Modal
 function closeModal() {
   const modal = document.getElementById("problem-modal");

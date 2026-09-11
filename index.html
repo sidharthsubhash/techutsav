@@ -41,7 +41,7 @@
         </ul>
       </nav>
 
-      <!-- Right: Date Pill & Christ University Logo -->
+      <!-- Right: Date Pill, Christ University Logo & Mobile Hamburger Menu -->
       <div class="nav-actions">
         <!-- Date Pill -->
         <div class="date-pill">
@@ -53,8 +53,55 @@
         <div class="brand-christ" title="CHRIST (Deemed to be University)">
           <img src="assets/christ-logo.png" alt="CHRIST (Deemed to be University)" class="christ-logo-img">
         </div>
+
+        <!-- Mobile 3-Bar Hamburger Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open mobile menu" onclick="toggleMobileMenu()">
+          <i data-lucide="menu" id="hamburger-icon"></i>
+        </button>
       </div>
 
+    </div>
+
+    <!-- Mobile Navigation Drawer / Dropdown -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-badge">NAVIGATION</span>
+        <button class="mobile-nav-close-btn" onclick="toggleMobileMenu()" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="#problem-statements-section" class="mobile-nav-link" onclick="toggleMobileMenu()">
+            <i data-lucide="layers"></i>
+            <span>Problem Statements</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="mobile-nav-link" onclick="toggleMobileMenu(); openAboutModal(event)">
+            <i data-lucide="info"></i>
+            <span>About Tech Utsav</span>
+          </a>
+        </li>
+        <li>
+          <a href="#timeline" class="mobile-nav-link" onclick="toggleMobileMenu(); openTimelineModal(event)">
+            <i data-lucide="calendar-days"></i>
+            <span>Event Timeline</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="mobile-nav-link" onclick="toggleMobileMenu(); openContactModal(event)">
+            <i data-lucide="mail"></i>
+            <span>Contact & Support</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <div class="mobile-date-badge">
+          <i data-lucide="calendar"></i>
+          <span>Sept 15 - 16, 2026</span>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -323,21 +370,25 @@
       document.getElementById("info-modal-title").textContent = "Event Timeline";
       document.getElementById("info-modal-body").innerHTML = `
         <div class="modal-section-box">
-          <h4>📅 Day 1: Sept 15, 2026</h4>
+          <h4>📅 Day 1: Sept 15, 2026 (9:00 AM – 4:00 PM)</h4>
           <ul>
-            <li><strong>09:00 AM:</strong> Inauguration & Problem Statement Briefing</li>
-            <li><strong>10:30 AM:</strong> Hackathon Begins / Hacking Phase 1</li>
-            <li><strong>04:00 PM:</strong> First Mentor Review & Checkpoint</li>
-            <li><strong>09:00 PM:</strong> Mid-way Progress Assessment</li>
+            <li><strong>09:00 AM:</strong> Hackathon Kickoff & Orientation</li>
+            <li><strong>09:30 AM – 02:30 PM:</strong> Hacking & Development Sprint</li>
+            <li><strong>02:30 PM – 04:00 PM:</strong> Round 1 Project Presentations & Evaluation</li>
+            <li><strong>04:00 PM:</strong> Day 1 Wrap-up</li>
           </ul>
         </div>
         <div class="modal-section-box">
-          <h4>📅 Day 2: Sept 16, 2026</h4>
+          <h4>📅 Day 2: Sept 16, 2026 (Grand Finale)</h4>
+          <p style="margin-bottom: 0.75rem; color: #38bdf8;">
+            <i data-lucide="bell" style="width: 14px; height: 14px; vertical-align: middle;"></i>
+            <strong>Note:</strong> Teams shortlisted from Day 1 presentations will be announced the next morning.
+          </p>
           <ul>
-            <li><strong>08:00 AM:</strong> Final Sprint & Code Freeze</li>
-            <li><strong>11:00 AM:</strong> Project Submission & Documentation</li>
-            <li><strong>01:30 PM:</strong> Grand Finale & Jury Presentations</li>
-            <li><strong>04:30 PM:</strong> Valedictory Ceremony & Prize Distribution</li>
+            <li><strong>Morning:</strong> Shortlisted Teams Announcement & Final Briefing</li>
+            <li><strong>Day 2 Sprint:</strong> Advanced Feature Building & Final Pitch Preparation</li>
+            <li><strong>Final Round:</strong> Grand Jury Presentations & Demonstration</li>
+            <li><strong>Valedictory:</strong> Awards Ceremony & Prize Distribution</li>
           </ul>
         </div>
       `;
