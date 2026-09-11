@@ -1383,8 +1383,9 @@ let currentPage = 1;
 let isViewAll = false;
 let searchQuery = "";
 
-// Active problem code in modal
+// Active problem in modal
 let activeProblemCode = "";
+let activeProblem = null;
 
 // Initialize App
 document.addEventListener("DOMContentLoaded", () => {
@@ -1621,6 +1622,7 @@ window.openProblemModal = function (year, id) {
   const modalDomain = document.getElementById("modal-ps-domain");
   const modalBody = document.getElementById("modal-ps-body");
 
+  activeProblem = problem;
   activeProblemCode = problem.code;
   modalTitle.textContent = problem.title;
   modalCode.textContent = problem.code;
@@ -1632,14 +1634,81 @@ window.openProblemModal = function (year, id) {
   lucide.createIcons();
 };
 
-// Copy Problem Code to Clipboard
-window.copyProblemCode = function () {
-  if (!activeProblemCode) return;
-  navigator.clipboard.writeText(activeProblemCode).then(() => {
-    showToast(`Copied ${activeProblemCode} to clipboard!`);
-  }).catch(() => {
-    showToast(`Problem Code: ${activeProblemCode}`);
+// Format Problem Details for Clipboard
+function formatProblemForClipboard(problem) {
+  if (!problem) return "";
+
+  let output = `==================================================\n`;
+  output += `${problem.code}: ${problem.title}\n`;
+  output += `Track: ${problem.year} Year Track • ${problem.category}\n`;
+  output += `SDG: ${problem.subtitle}\n`;
+  output += `==================================================\n\n`;
+
+  const tempEl = document.createElement("div");
+  tempEl.innerHTML = problem.fullDescription;
+
+  // Challenge Overview
+  const p = tempEl.querySelector("p");
+  if (p) {
+    output += `CHALLENGE OVERVIEW:\n${p.textContent.trim()}\n\n`;
+  }
+
+  // Component breakdowns and criteria
+  const boxes = tempEl.querySelectorAll(".modal-section-box");
+  boxes.forEach(box => {
+    const h4 = box.querySelector("h4");
+    if (h4) {
+      output += `${h4.textContent.trim().toUpperCase()}:\n`;
+    }
+    const ul = box.querySelector("ul");
+    if (ul) {
+      box.querySelectorAll("li").forEach(li => {
+        output += `• ${li.textContent.trim()}\n`;
+      });
+      output += `\n`;
+    } else {
+      const bp = box.querySelector("p");
+      if (bp) {
+        output += `${bp.textContent.trim()}\n\n`;
+      }
+    }
   });
+
+  return output.trim();
+}
+
+// Fallback clipboard copy using textarea element
+function copyTextFallback(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error("Fallback copy failed", err);
+  }
+  document.body.removeChild(textarea);
+}
+
+// Copy Problem Description to Clipboard
+window.copyProblemCode = function () {
+  if (!activeProblem) return;
+  const fullText = formatProblemForClipboard(activeProblem);
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(fullText).then(() => {
+      showToast(`Copied full description for ${activeProblem.code} to clipboard!`);
+    }).catch(() => {
+      copyTextFallback(fullText);
+      showToast(`Copied full description for ${activeProblem.code} to clipboard!`);
+    });
+  } else {
+    copyTextFallback(fullText);
+    showToast(`Copied full description for ${activeProblem.code} to clipboard!`);
+  }
 };
 
 // Toggle Mobile Navigation Drawer
