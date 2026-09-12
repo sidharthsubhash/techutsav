@@ -448,14 +448,22 @@ body {
   font-family: var(--font-main);
   font-size: 4.4rem;
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 0.9;
   letter-spacing: -1.5px;
   color: #ffffff;
   margin-bottom: 1.5rem;
 }
 
-.hero-title span {
+.hero-line {
   display: block;
+}
+
+.hero-line-top {
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
+}
+
+.hero-line-bottom {
   background: linear-gradient(135deg, #a78bfa 0%, #c084fc 40%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
