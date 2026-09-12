@@ -559,33 +559,33 @@ const PROBLEMS_2ND_YEAR = [
   {
     id: 13,
     code: "PS-2Y-13",
-    title: "AI Waste Classifier",
+    title: "Circular Economy Tracker",
     subtitle: "SDG 12 — Responsible Consumption",
     category: "Responsible Consumption & Production",
     icon: "recycle",
     year: "2nd",
-    shortDescription: "Classify uploaded waste images into recyclable, organic, hazardous, or general waste categories with disposal guidance.",
+    shortDescription: "Design a smart circular economy tracker and reverse logistics network for consumer electronics to extend product lifespans and eliminate electronic waste (e-waste).",
     fullDescription: `
       <h3>Challenge Overview</h3>
-      <p>Build a web application where users upload an image of waste. The system should classify it into categories such as recyclable, organic, hazardous or general waste and provide disposal guidance.</p>
+      <p>Design a smart circular economy tracker and reverse logistics network for consumer electronics to extend product lifespans and eliminate electronic waste (e-waste).</p>
 
       <div class="modal-section-box">
         <h4>🤖 AI Component</h4>
-        <p><strong>Image Classification / API</strong> — Use an image classification model or AI API to identify waste type from uploaded photos and categorize into disposal categories.</p>
+        <p><strong>Smart Tracking & Prediction</strong> — Use AI to monitor device lifecycles, identify repair or reuse opportunities, and predict the best route for repair, refurbishment, recycling, or material recovery.</p>
       </div>
 
       <div class="modal-section-box">
         <h4>🖥️ Full Stack Component</h4>
-        <p><strong>Image Upload + Result Page</strong> — Build an image upload interface with drag-and-drop support, a result page displaying the classification, confidence score, and disposal instructions.</p>
+        <p><strong>Lifecycle Dashboard + Reverse Logistics Network</strong> — Build a system that tracks electronic products across their lifecycle and maps reverse logistics workflows for collection, repair, resale, and recycling.</p>
       </div>
 
       <div class="modal-section-box">
         <h4>Key Objectives & Deliverables</h4>
         <ul>
-          <li>Image upload interface (drag & drop / file picker).</li>
-          <li>AI waste classification (recyclable, organic, hazardous, general).</li>
-          <li>Disposal guidance and instructions per category.</li>
-          <li>Classification history and statistics.</li>
+          <li>Lifecycle tracking for consumer electronics and components.</li>
+          <li>AI-driven recommendations for repair, resale, remanufacturing, or recycling.</li>
+          <li>Reverse logistics workflow and collection network model.</li>
+          <li>Dashboard showing e-waste reduction, recovery, and product lifespan extension metrics.</li>
         </ul>
       </div>
 
@@ -599,7 +599,7 @@ const PROBLEMS_2ND_YEAR = [
         </ul>
       </div>
     `,
-    tags: ["2nd Year", "SDG 12", "Responsible Consumption", "Image Classification", "Hackathon 2026"]
+    tags: ["2nd Year", "SDG 12", "Responsible Consumption", "Circular Economy", "Hackathon 2026"]
   },
   {
     id: 14,
@@ -1192,33 +1192,33 @@ const PROBLEMS_3RD_YEAR = [
   {
     id: 12,
     code: "PS-3Y-12",
-    title: "Smart Waste Management",
+    title: "Digital Product Passport & Reverse Logistics Engine",
     subtitle: "SDG 12 — Responsible Consumption",
     category: "Responsible Consumption & Production",
     icon: "trash-2",
     year: "3rd",
-    shortDescription: "Classify waste images and predict waste generation trends to improve segregation with analytics.",
+    shortDescription: "Design a trustless, automated Digital Product Passport (DPP) framework combined with a computer-vision-driven reverse logistics engine to maximize component-level recovery, remanufacturing, and cross-industry material circularity for consumer electronics.",
     fullDescription: `
       <h3>Challenge Overview</h3>
-      <p>Develop a system that classifies uploaded waste images and analyzes historical waste-generation data to predict which waste categories are likely to increase. Provide recommendations for improving segregation.</p>
+      <p>Design a trustless, automated Digital Product Passport (DPP) framework combined with a computer-vision-driven reverse logistics engine to maximize component-level recovery, remanufacturing, and cross-industry material circularity for consumer electronics.</p>
 
       <div class="modal-section-box">
         <h4>🤖 AI Component</h4>
-        <p><strong>Computer Vision + Prediction</strong> — Combine image classification for waste categorization with a prediction model on historical waste data to forecast category-wise waste generation trends.</p>
+        <p><strong>Computer Vision + Trustless Digital Tracking</strong> — Use AI-powered visual inspection to identify device condition, component usability, and material composition, while linking this data to a secure digital product passport for traceability and lifecycle decisions.</p>
       </div>
 
       <div class="modal-section-box">
         <h4>🖥️ Full Stack Component</h4>
-        <p><strong>Upload + Analytics Dashboard</strong> — Build a waste image upload interface, an analytics dashboard with waste category trends, prediction charts, and actionable segregation improvement recommendations.</p>
+        <p><strong>Passport Platform + Reverse Logistics Dashboard</strong> — Build a system that records product provenance, condition, and material data, then routes devices through repair, remanufacturing, or recycling flows based on automated intelligence.</p>
       </div>
 
       <div class="modal-section-box">
         <h4>Key Objectives & Deliverables</h4>
         <ul>
-          <li>Waste image classification using computer vision.</li>
-          <li>Historical waste data analysis and trend prediction.</li>
-          <li>Category-wise waste generation forecasting.</li>
-          <li>Segregation improvement recommendations.</li>
+          <li>Trustless or tamper-resistant product passport for consumer electronics.</li>
+          <li>Computer-vision-based reverse logistics assessment of device condition and components.</li>
+          <li>Component-level recovery and remanufacturing decision engine.</li>
+          <li>Cross-industry material circularity and e-waste reduction analytics dashboard.</li>
         </ul>
       </div>
 
@@ -1232,7 +1232,7 @@ const PROBLEMS_3RD_YEAR = [
         </ul>
       </div>
     `,
-    tags: ["3rd Year", "SDG 12", "Responsible Consumption", "Computer Vision", "Prediction", "Hackathon 2026"]
+    tags: ["3rd Year", "SDG 12", "Responsible Consumption", "Computer Vision", "Circular Economy", "Hackathon 2026"]
   },
   {
     id: 13,
