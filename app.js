@@ -1371,10 +1371,28 @@ const PROBLEMS_3RD_YEAR = [
   }
 ];
 
+// The most technically demanding challenges are reserved for a separate handoff.
+const REMOVED_PROBLEM_CODES = new Set([
+  "PS-2Y-10",
+  "PS-2Y-11",
+  "PS-2Y-12",
+  "PS-2Y-13",
+  "PS-2Y-15",
+  "PS-3Y-09",
+  "PS-3Y-10",
+  "PS-3Y-11",
+  "PS-3Y-12",
+  "PS-3Y-15"
+]);
+
 // Data Store
 const DATA = {
-  "2nd": PROBLEMS_2ND_YEAR,
+  "2nd": PROBLEMS_2ND_YEAR
+    .filter(problem => !REMOVED_PROBLEM_CODES.has(problem.code))
+    .map((problem, index) => ({ ...problem, id: index + 1 })),
   "3rd": PROBLEMS_3RD_YEAR
+    .filter(problem => !REMOVED_PROBLEM_CODES.has(problem.code))
+    .map((problem, index) => ({ ...problem, id: index + 1 }))
 };
 
 // Application State
@@ -1472,7 +1490,7 @@ function toggleViewAll() {
   if (viewAllBtn) {
     viewAllBtn.innerHTML = isViewAll
       ? `<span>Show Paginated View</span> <i data-lucide="grid"></i>`
-      : `<span>View All 15 Problem Statements</span> <i data-lucide="arrow-right"></i>`;
+      : `<span>View All 10 Problem Statements</span> <i data-lucide="arrow-right"></i>`;
   }
   renderProblemStatements();
 }
