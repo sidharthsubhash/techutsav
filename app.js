@@ -1,12 +1,12 @@
 /**
- * Tech Utsav Hackathon - Problem Statements Portal
+ * CATALYST 2030 Hackathon - Problem Statements Portal
  * Supports 2nd Year & 3rd Year Tracks (15 Problem Statements each)
  * All 30 SDG-aligned problem statements with real content.
  */
 
 // Global Configuration
 const CONFIG = {
-  hackathonTitle: "TECH UTSAV 2026",
+  hackathonTitle: "CATALYST 2030",
   eventDates: "Sept 15 - 16, 2026",
   itemsPerPage: 8,
 };
