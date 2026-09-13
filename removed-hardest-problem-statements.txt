@@ -1,0 +1,196 @@
+CATALYST 2030 - REMOVED HARDEST PROBLEM STATEMENTS
+
+These are the five most technically demanding challenges selected from each track, ranked by implementation breadth, AI complexity, and integration requirements.
+
+==================== 2ND YEAR ====================
+
+1. PS-2Y-13 - Circular Economy Tracker
+SDG 12 - Responsible Consumption
+
+Challenge:
+Design a smart circular economy tracker and reverse logistics network for consumer electronics to extend product lifespans and eliminate electronic waste (e-waste).
+
+AI component:
+Use AI to monitor device lifecycles, identify repair or reuse opportunities, and predict the best route for repair, refurbishment, recycling, or material recovery.
+
+Full-stack component:
+Build a lifecycle dashboard and reverse logistics network that tracks electronic products across their lifecycle and maps collection, repair, resale, and recycling workflows.
+
+Key deliverables:
+- Lifecycle tracking for consumer electronics and components.
+- AI recommendations for repair, resale, remanufacturing, or recycling.
+- Reverse logistics workflow and collection network model.
+- Dashboard showing e-waste reduction, recovery, and product lifespan metrics.
+
+
+2. PS-2Y-15 - Eco-Report
+SDG 14/15 - Life Below Water / Life on Land
+
+Challenge:
+Create a platform where users upload an image of an environmental issue such as litter, damaged vegetation, or polluted water. AI categorizes the issue and displays it on a community map.
+
+AI component:
+Use image or text classification to categorize uploaded environmental issue images as litter, vegetation damage, water pollution, or similar categories.
+
+Full-stack component:
+Build an image upload interface, a community map displaying reported issues by location, and a reports view showing categorized issues and trends.
+
+Key deliverables:
+- Environmental issue image upload with location tagging.
+- AI-powered issue categorization.
+- Interactive community map with issue markers.
+- Reports dashboard with category trends and statistics.
+
+
+3. PS-2Y-11 - Campus Problem-Solving Portal
+SDG 9 - Industry & Innovation
+
+Challenge:
+Create a platform where students submit real-world campus or community problems. AI automatically categorizes problems and groups similar submissions to identify recurring issues.
+
+AI component:
+Use text classification and clustering to categorize submissions and cluster similar problems.
+
+Full-stack component:
+Build a student submission form and an admin dashboard showing categories, issue clusters, trends, and recurring concerns.
+
+Key deliverables:
+- Problem submission interface.
+- Automatic categorization and clustering.
+- Admin dashboard with issue trends and clusters.
+- Identification of recurring issues.
+
+
+4. PS-2Y-12 - Smart Parking Finder
+SDG 11 - Sustainable Cities & Communities
+
+Challenge:
+Develop a web application that displays available parking spaces from user-provided or simulated data, predicts peak parking periods, and suggests alternatives.
+
+AI component:
+Predict peak parking occupancy from historical or simulated patterns and suggest optimal alternative parking locations.
+
+Full-stack component:
+Build an interactive map or grid of parking spaces with availability, peak-time predictions, alternative suggestions, and historical data.
+
+Key deliverables:
+- Real-time parking availability display.
+- Peak-period prediction.
+- Alternative parking suggestions.
+- Data persistence and historical trend analysis.
+
+
+5. PS-2Y-10 - Resume Skill Analyzer
+SDG 8 - Decent Work
+
+Challenge:
+Build a web application that analyzes a resume against a selected job description to identify matching skills, missing skills, and areas for improvement.
+
+AI component:
+Use natural language processing to extract skills from resumes, compare them with job requirements, and identify gaps.
+
+Full-stack component:
+Build resume upload and parsing, job-description selection or input, and a visual skill-match dashboard with improvement suggestions.
+
+Key deliverables:
+- Resume upload and parsing.
+- Job description selection or input.
+- NLP skill extraction and matching.
+- Visual analysis dashboard with improvement suggestions.
+
+
+==================== 3RD YEAR ====================
+
+1. PS-3Y-12 - Digital Product Passport & Reverse Logistics Engine
+SDG 12 - Responsible Consumption
+
+Challenge:
+Design a trustless, automated Digital Product Passport framework combined with a computer-vision-driven reverse logistics engine to maximize component recovery, remanufacturing, and cross-industry material circularity for consumer electronics.
+
+AI component:
+Use computer vision to identify device condition, component usability, and material composition, and connect those findings to a secure product passport for lifecycle decisions.
+
+Full-stack component:
+Build a passport platform and reverse logistics dashboard that records provenance, condition, and material data, then routes devices through repair, remanufacturing, or recycling.
+
+Key deliverables:
+- Tamper-resistant product passport.
+- Computer-vision assessment of device condition and components.
+- Component-level recovery and remanufacturing decision engine.
+- Material circularity and e-waste reduction analytics dashboard.
+
+
+2. PS-3Y-09 - Predictive Maintenance Dashboard
+SDG 9 - Industry & Innovation
+
+Challenge:
+Using machine-sensor data, predict whether equipment is likely to fail based on temperature, vibration, and operating conditions.
+
+AI component:
+Build a classification or anomaly-detection model to predict imminent equipment failures and flag machines requiring preventive maintenance.
+
+Full-stack component:
+Build a real-time monitoring dashboard showing sensor readings, health scores, failure-risk indicators, and maintenance alerts.
+
+Key deliverables:
+- Sensor-data processing and feature engineering.
+- Equipment-failure prediction model.
+- Real-time monitoring dashboard with health scores.
+- Alert system for maintenance scheduling.
+
+
+3. PS-3Y-15 - Biodiversity Intelligence Platform
+SDG 15 - Life on Land
+
+Challenge:
+Build a web application where users upload plant or animal images. The system identifies the species using an AI model or API and maintains a biodiversity database with observation and distribution data.
+
+AI component:
+Use computer vision to identify species from photographs and return confidence-scored identifications.
+
+Full-stack component:
+Build image upload, species-result display, an observation database, and a distribution map showing where species have been seen.
+
+Key deliverables:
+- Image upload and species identification.
+- Confidence-scored AI recognition.
+- Biodiversity observation database.
+- Species distribution map and statistics.
+
+
+4. PS-3Y-10 - Innovation Idea Intelligence Platform
+SDG 9 - Industry & Innovation
+
+Challenge:
+Create a platform where users submit technological ideas. AI categorizes ideas, detects similar submissions, identifies problem domains, and generates a basic feasibility and impact summary.
+
+AI component:
+Use NLP and clustering to categorize ideas, detect semantic duplicates, identify trends, and generate feasibility or impact assessments.
+
+Full-stack component:
+Build an idea submission portal and admin dashboard showing categories, similarity clusters, trending domains, and feasibility summaries.
+
+Key deliverables:
+- Idea submission and categorization portal.
+- Similarity and duplicate detection.
+- Problem-domain identification and trend analysis.
+- Automated feasibility and impact summaries.
+
+
+5. PS-3Y-11 - Traffic Congestion Predictor
+SDG 11 - Sustainable Cities & Communities
+
+Challenge:
+Use a historical traffic dataset to predict congestion levels for selected roads and time periods, visualize hotspots, and suggest alternative routes.
+
+AI component:
+Build a prediction model that forecasts congestion levels for roads and time windows and identifies recurring hotspot patterns.
+
+Full-stack component:
+Build a dashboard with a color-coded congestion map, time-based prediction selectors, and alternative route suggestions.
+
+Key deliverables:
+- Historical traffic analysis and model training.
+- Congestion prediction by road and time period.
+- Interactive congestion-hotspot map.
+- Alternative route recommendations.
