@@ -64,6 +64,87 @@ body {
   line-height: 1.5;
 }
 
+/* Intro loading screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: #000000;
+  overflow: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.025) 0,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.loading-screen-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  animation: loading-screen-in 0.7s ease both;
+}
+
+.loading-screen-logo-wrap {
+  padding: 0;
+}
+
+.loading-screen-logo {
+  display: block;
+  width: 104px;
+  height: auto;
+  filter: brightness(1.15) drop-shadow(0 0 12px rgba(255, 255, 255, 0.14));
+}
+
+.loading-screen-progress {
+  display: block;
+  width: 64px;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.loading-screen-progress::after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff;
+  animation: loading-progress 0.9s ease-in-out infinite;
+}
+
+.loading-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes loading-screen-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes loading-progress {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(310%); }
+}
+
 /* Background Cyber Grid Glow */
 .cyber-bg-glow {
   position: fixed;

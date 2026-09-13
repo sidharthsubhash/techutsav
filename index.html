@@ -14,6 +14,16 @@
 </head>
 <body>
 
+  <!-- Intro loading screen -->
+  <div class="loading-screen" id="loading-screen" role="status" aria-label="Loading ASCII">
+    <div class="loading-screen-content">
+      <div class="loading-screen-logo-wrap">
+        <img src="assets/ascii-logo.png" alt="ASCII" class="loading-screen-logo">
+      </div>
+      <span class="loading-screen-progress" aria-hidden="true"></span>
+    </div>
+  </div>
+
   <!-- Ambient Cyber Background Effects -->
   <div class="cyber-bg-glow">
     <div class="glow-orb-1"></div>
@@ -423,6 +433,13 @@
       if (modal) modal.classList.remove("open");
       document.body.style.overflow = "";
     }
+
+    window.setTimeout(() => {
+      const loadingScreen = document.getElementById("loading-screen");
+      if (!loadingScreen) return;
+      loadingScreen.classList.add("is-hidden");
+      window.setTimeout(() => loadingScreen.remove(), 500);
+    }, 1000);
   </script>
 </body>
 </html>
